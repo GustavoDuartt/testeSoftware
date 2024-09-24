@@ -44,6 +44,7 @@ function App() {
 
   return (
     <div className="app-container">
+      <h1>Feito por Gustavo</h1>
       <h1>Gerenciador de Estudos 2024</h1>
 
       <div className="input-container">
