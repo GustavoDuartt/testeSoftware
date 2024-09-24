@@ -1,126 +1,75 @@
-@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&family=Uncial+Antiqua&display=swap');
-
 body {
-  background: linear-gradient(135deg, #0b0c1e, #1f1f2e); 
-  color: #e0e0e0; 
-  font-family: "Pridi", serif;
+  background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .app-container {
-  max-width: 90%;
-  width: 1000px; 
-  margin: 20px auto;
+  max-width: 800px;
+  margin: 40px auto;
   padding: 20px;
-  border-radius: 12px;
-  background-color: #1e1e2d; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
-  position: relative; 
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-  color: #9a9aff;
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 30px;
-  letter-spacing: 2px;
-}
-
-h2 {
-  color: #9a9aff; 
-  margin-bottom: 15px;
-  font-size: 22px;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+  color: #333;
 }
 
 .input-container {
-  margin-top: 5px;
   margin-bottom: 20px;
-  padding: 15px;
-  border: 1px solid #333; 
-  border-radius: 8px;
-  background-color: #2a2a3b; 
-}
-
-input[type="text"],
-select {
-  width: calc(100% - 20px); 
-  padding: 10px;
-  border: 1px solid #444; 
-  border-radius: 4px;
-  background-color: #333; 
-  color: #e0e0e0; 
-}
-
-input[type="text"]:focus,
-select:focus {
-  border-color: #9a9aff; 
-  outline: none;
-  box-shadow: 0 0 8px rgba(154, 154, 255, 0.6); 
-}
-
-button {
-  margin-top: 5%;
-  background-color: #5eff00; 
-  color: #e0e0e0;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-button:hover {
-  background-color: #2bff00; 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
 
 label {
   display: block;
-  margin-top: 7px;
-  margin-bottom: 5px;
-  color: #bbb; 
+  margin: 10px 0 5px;
+}
+
+input[type="text"], select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.dia-container {
+  margin: 15px 0;
 }
 
 .periodo-container {
-  margin-bottom: 20px;
-  padding: 5px;
-  border: 1px solid #444; 
-  border-radius: 6px;
-  background-color: #2a2a3b; 
-}
-
-.Resposta {
-  margin-top: 20px;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
 }
 
 .limpar {
-  margin-bottom: 2%;
-  margin-top: -20%;
-  margin-left: 83%;
-  background-color: #ff0000; 
-  color: #e0e0e0;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: #dc3545;
+  margin-top: 5px;
 }
 
 .limpar:hover {
-  background: rgb(112, 0, 0);
-  color: #e0e0e0;
+  background-color: #c82333;
 }
+
 fieldset {
-  padding: 25px;
-  border-radius: 8px;
-  border-color: #ffffff;
+  border: none;
 }

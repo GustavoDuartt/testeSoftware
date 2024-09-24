@@ -33,13 +33,15 @@ function App() {
   };
 
   const limparAtividade = (dia, periodo) => {
-    setEstudos((prevEstudos) => ({
-      ...prevEstudos,
-      [dia]: {
-        ...prevEstudos[dia],
-        [periodo]: '',
-      },
-    }));
+    if (window.confirm('Você tem certeza que deseja limpar?')) {
+      setEstudos((prevEstudos) => ({
+        ...prevEstudos,
+        [dia]: {
+          ...prevEstudos[dia],
+          [periodo]: '',
+        },
+      }));
+    }
   };
 
   return (
@@ -61,7 +63,7 @@ function App() {
           <option value="noite">Noite</option>
         </select>
 
-        <label>Oque estudar:</label>
+        <label>O que estudar:</label>
         <input
           type="text"
           value={atividade}
@@ -70,33 +72,32 @@ function App() {
         />
         <button onClick={adicionarAtividade}>Adicionar Estudo</button>
       </div>
-      <div className='sombra'></div>
 
-      <hr></hr>
+      <hr />
 
-      <div className='Resposta'>
+      <div className='respostas'>
         {diasDaSemana.map(dia => (
           <div key={dia} className="dia-container">
             <h2>{dia}</h2>
             <fieldset>
-            <div className="periodo-container">
-              <p>Manhã:<br></br>{estudos[dia].manha}</p>
-              {estudos[dia].manha && (
-                <button onClick={() => limparAtividade(dia, 'manha')} className="limpar">Limpar</button>
-              )}
-            </div>
-            <div className="periodo-container">
-              <p>Tarde:<br></br>{estudos[dia].tarde}</p>
-              {estudos[dia].tarde && (
-                <button onClick={() => limparAtividade(dia, 'tarde')} className="limpar">Limpar</button>
-              )}
-            </div>
-            <div className="periodo-container">
-              <p>Noite:<br></br>{estudos[dia].noite}</p>
-              {estudos[dia].noite && (
-                <button onClick={() => limparAtividade(dia, 'noite')} className="limpar">Limpar</button>
-              )}
-            </div>
+              <div className="periodo-container">
+                <p>Manhã:<br />{estudos[dia].manha}</p>
+                {estudos[dia].manha && (
+                  <button onClick={() => limparAtividade(dia, 'manha')} className="limpar">Limpar</button>
+                )}
+              </div>
+              <div className="periodo-container">
+                <p>Tarde:<br />{estudos[dia].tarde}</p>
+                {estudos[dia].tarde && (
+                  <button onClick={() => limparAtividade(dia, 'tarde')} className="limpar">Limpar</button>
+                )}
+              </div>
+              <div className="periodo-container">
+                <p>Noite:<br />{estudos[dia].noite}</p>
+                {estudos[dia].noite && (
+                  <button onClick={() => limparAtividade(dia, 'noite')} className="limpar">Limpar</button>
+                )}
+              </div>
             </fieldset>
           </div>
         ))}
