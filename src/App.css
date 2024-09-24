@@ -67,7 +67,7 @@ select:focus {
 
 button {
   margin-top: 5%;
-  background-color: #4a4a7f; 
+  background-color: #5eff00; 
   color: #e0e0e0;
   padding: 12px 24px;
   border: none;
@@ -79,7 +79,7 @@ button {
 }
 
 button:hover {
-  background-color: #3a3a6f; 
+  background-color: #2bff00; 
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
 
