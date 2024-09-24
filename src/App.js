@@ -44,6 +44,8 @@ function App() {
     }
   };
 
+
+
   return (
     <div className="app-container">
       <h1>Gerenciador de Estudos 2024</h1>
@@ -107,3 +109,4 @@ function App() {
 }
 
 export default App;
+
